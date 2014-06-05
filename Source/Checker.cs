@@ -24,8 +24,6 @@ namespace threatexpertchecker
         private readonly object _lock = new object();
         private bool _stop;
         private int _scanDaysThreshold = 30;
-        private List<string> _tempHashes;
-        private static AutoResetEvent _done = null;
         private string _proxy = string.Empty;
         #endregion
 

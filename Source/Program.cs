@@ -47,6 +47,14 @@ namespace threatexpertchecker
                     databasePath = Misc.GetApplicationDirectory();
                 }
 
+                _settings = new Settings();
+                string ret = _settings.Load();
+                if (ret.Length > 0)
+                {
+                    Console.WriteLine(ret);
+                    return;
+                }
+
                 Global.Mode mode = Global.Mode.Cache;
                 switch (_options.Mode.ToLower())
                 {
